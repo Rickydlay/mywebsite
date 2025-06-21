@@ -23,6 +23,8 @@ app.use('/api/auth', authRoutes);
 app.use('/api/answers', answerRoutes); // Fixed duplicate require
 app.use('/api/profile', require('./routes/profile'));
 
+app.get('/', (req, res) => res.send('Q&A Backend Running'));
+
 app.listen(port, '0.0.0.0', () => { // Added '0.0.0.0' for Render
   console.log(`Server running on port ${port}`);
 });
